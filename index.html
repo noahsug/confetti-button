@@ -1,11 +1,36 @@
 <html>
   <head>
-    <link href="app.css">
+    <style>
+      button {
+        width: 100%;
+        height: 300px;
+        background-color: black;
+        color: yellow;
+        font-size: 30px;
+      }
+
+      img {
+        display: none;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <button>Click here</button>
     <img src="https://i.stack.imgur.com/8IjyR.gif">
 
-    <script src="app.js">
+    <script>
+      const btn = document.querySelector('button')
+      const img = document.querySelector('img')
+      btn.addEventListener('click', () => {
+        btn.style.display = 'none'
+        img.style.display = 'block'
+      })
+
+      img.addEventListener('click', () => {
+        btn.style.display = 'block'
+        img.style.display = 'none'
+      })
+    </script>
   </body>
 </html>
